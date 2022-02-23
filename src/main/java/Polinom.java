@@ -9,16 +9,27 @@ public class Polinom {
         polinom= new ArrayList<Monom>();
     }
 
-    public void add(Monom m)
+    public void add( double coeficient,int grad)
     {
-        polinom.add(m);
+
+        polinom.add(new Monom(coeficient,grad));
     }
 
     @Override
     public String toString() {
         String aux="";
-        for(Monom monom:polinom)
-            aux+=monom;
+        String auxMonom="";
+        int k=0;
+        for(Monom monom:polinom) {
+            if(k!=0)
+            {
+                aux+=(monom.getCoeficient()>0?"+":"")+monom;
+            }
+            else{
+                aux+=monom;
+                k=1;
+            }
+        }
 
         return aux;
     }

@@ -1,10 +1,11 @@
 public class Monom {
-    private int grad;
     private double coeficient;
+    private int grad;
 
-    public Monom(int grad, double coeficient) {
-        this.grad = grad;
+    public Monom(double coeficient, int grad) {
         this.coeficient = coeficient;
+        this.grad = grad;
+
     }
 
     public int getGrad() {
@@ -25,6 +26,19 @@ public class Monom {
 
     @Override
     public String toString() {
-        return (coeficient>0?"+":"")+coeficient+(grad>0?"*x^"+grad:"");
+        String coef="";
+        int k=0;
+        if(coeficient==-1 || coeficient==1)
+        {
+            coef="-";
+            k=1;
+
+        }
+        else
+        {
+            coef=String.valueOf(coeficient).replaceAll("()\\.0+$|(\\..+?)0+$", "$2");
+
+        }
+        return coef+(grad>0?(((coef.compareTo("-")==0)?"":"*")+((grad==1)?"x":"x^"+grad)):"");
     }
 }
