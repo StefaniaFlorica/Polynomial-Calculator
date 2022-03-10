@@ -48,7 +48,7 @@ public class OperatiiTest extends TestCase {
     public void testIntegreaza() throws ExceptieFormat {
         Polinom a= Split.splitPoly("x^5-10x^4+19.5x^3-15.5x^2-32.5x");
         Polinom rezultat= Operatii.integreaza(a);
-        Polinom corect= Split.splitPoly("0.2*x^6-2.5*x^5+6.5*x^4-7.75*x^3-32.5*x^2");
+        Polinom corect= Split.splitPoly("0.16666666666666666*x^6-2*x^5+4.875*x^4-5.166666666666667*x^3-16.25*x^2");
         assertEquals(corect, rezultat);
     }
 }
