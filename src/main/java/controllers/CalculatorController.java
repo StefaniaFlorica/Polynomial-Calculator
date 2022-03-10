@@ -1,6 +1,8 @@
 package controllers;
 import models.ExceptieFormat;
+import models.Operatii;
 import models.Polinom;
+import models.Split;
 import views.CalculatorView;
 
 import javax.swing.*;

@@ -1,7 +1,5 @@
 package models;
 
-import controllers.Operatii;
-import controllers.Split;
 import junit.framework.TestCase;
 
 public class OperatiiTest extends TestCase {
